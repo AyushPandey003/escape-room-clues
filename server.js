@@ -15,7 +15,7 @@ app.get('/page3', (req, res) => {
 });
 
 // Handle password submission
-app.post('/check-answer', express.urlencoded({ extended: true }), (req, res) => {
+app.post('/check-password', express.urlencoded({ extended: true }), (req, res) => {
   const password = req.body.password;
 
   if (password === 'unlock') {
