@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Room: Final Challenge</title>
+    <title>Escape Room: Riddle Challenge</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
         }
         
         h1 {
-            text-align: center;
             margin-top: 20px;
         }
     
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
         form {
             display: flex;
             justify-content: center;
@@ -22,11 +28,11 @@
             margin-top: 30px;
         }
     
-        input[type="password"] {
+        input[type="text"] {
             padding: 10px;
             margin: 10px;
             font-size: 16px;
-            width: 200px;
+            width: 300px;
         }
     
         button {
@@ -43,12 +49,12 @@
             background-color: #45a049;
         }
     </style>
-    
 </head>
 <body>
-    <h1>Enter the final password</h1>
-    <form action="/check-password" method="POST">
-        <input type="password" name="password" placeholder="Enter password" required>
+    <h1>Solve the Riddle to Escape!</h1>
+    <p>What has to be broken before you can use it?</p>
+    <form action="/check-answer" method="POST">
+        <input type="text" name="answer" placeholder="Enter your answer" required>
         <button type="submit">Submit</button>
     </form>
 </body>
